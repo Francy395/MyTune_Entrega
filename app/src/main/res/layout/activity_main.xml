@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1e1e1e">
+
+    <!-- Menú lateral -->
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="0.35"
+        android:orientation="vertical"
+        android:background="#2a2a2a"
+        android:paddingTop="32dp">
+
+        <Button
+            android:id="@+id/btnPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Perfil" />
+
+        <Button
+            android:id="@+id/btnVideos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Videos" />
+
+        <Button
+            android:id="@+id/btnStreaming"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Streaming" />
+
+        <Button
+            android:id="@+id/btnListas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mis Listas" />
+
+        <Button
+            android:id="@+id/btnAlbumes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Álbumes" />
+
+    </LinearLayout>
+
+    <!-- Contenedor para fragments -->
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="0dp"
+        android:layout_weight="0.65"
+        android:paddingTop="32dp"
+        android:layout_height="match_parent"/>
+</LinearLayout>

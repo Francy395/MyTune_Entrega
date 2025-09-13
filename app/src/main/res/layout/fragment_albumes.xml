@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1e1e1e"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Carátulas de Álbumes"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🎵 Dawn FM - The Weeknd"
+        android:textColor="#aaa"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔥 Mercury - Imagine Dragons"
+        android:textColor="#aaa"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🌟 Future Nostalgia - Dua Lipa"
+        android:textColor="#aaa"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="💫 Positions - Ariana Grande"
+        android:textColor="#aaa"/>
+</LinearLayout>
