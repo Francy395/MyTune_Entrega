@@ -16,6 +16,7 @@
         android:scaleType="fitCenter"
         android:src="@drawable/ic_music_perfil_foreground" />
 
+
     <TextView
         android:id="@+id/txtTituloPerfil"
         android:layout_width="150dp"
@@ -33,4 +34,36 @@
         android:layout_height="wrap_content"
         android:text="2 canciones • 3 listas"
         android:textColor="#aaa" />
+
+    <TextView
+        android:id="@+id/txtArtistasFavoritos"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Artistas Favoritos"
+        android:textColor="#fff"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="12dp"
+        android:textSize="20sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="315dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/containerArtistas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnAgregarArtista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar Canción"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"/>
+
 </LinearLayout>

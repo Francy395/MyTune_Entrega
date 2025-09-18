@@ -20,6 +20,12 @@
             android:text="Perfil" />
 
         <Button
+            android:id="@+id/btnAlbumes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Álbumes" />
+
+        <Button
             android:id="@+id/btnVideos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -36,12 +42,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Mis Listas" />
-
-        <Button
-            android:id="@+id/btnAlbumes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Álbumes" />
 
     </LinearLayout>
 
