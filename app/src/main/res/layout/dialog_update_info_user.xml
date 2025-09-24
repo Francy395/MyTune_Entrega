@@ -5,25 +5,14 @@
     android:padding="20dp">
 
     <EditText
-        android:id="@+id/inputTitulo"
+        android:id="@+id/inputNombreUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nombre Artista"
+        android:hint="Nombre Usuario Nuevo"
         android:inputType="text"
         android:background="@drawable/bg_input_add_artista"
         android:padding="12dp"
         android:textColor="#000000"
         android:textColorHint="#764ba2"
         android:layout_marginBottom="12dp"/>
-
-    <EditText
-        android:id="@+id/inputGenero"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Artista / Género"
-        android:inputType="text"
-        android:background="@drawable/bg_input_add_artista"
-        android:padding="12dp"
-        android:textColor="#000000"
-        android:textColorHint="#764ba2"/>
 </LinearLayout>

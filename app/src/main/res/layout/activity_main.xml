@@ -17,31 +17,66 @@
             android:id="@+id/btnPerfil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="#FFFFFF"
             android:text="Perfil" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#555555"/>
 
         <Button
             android:id="@+id/btnAlbumes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="#FFFFFF"
             android:text="Álbumes" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#555555"/>
 
         <Button
             android:id="@+id/btnVideos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="#FFFFFF"
             android:text="Videos" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#555555"/>
 
         <Button
             android:id="@+id/btnStreaming"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="#FFFFFF"
             android:text="Streaming" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#555555"/>
 
         <Button
             android:id="@+id/btnListas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="#FFFFFF"
             android:text="Mis Listas" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#555555"/>
 
     </LinearLayout>
 

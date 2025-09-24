@@ -1,0 +1,14 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Color blanco semitransparente para que contraste con tu gradiente -->
+    <solid android:color="#F2FFFFFF" />
+
+    <!-- Bordes redondeados -->
+    <corners android:radius="12dp" />
+
+    <!-- Borde sutil con tono del gradiente -->
+    <stroke
+        android:width="2dp"
+        android:color="#667eea" />
+</shape>

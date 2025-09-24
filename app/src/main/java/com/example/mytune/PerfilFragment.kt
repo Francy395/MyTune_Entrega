@@ -14,13 +14,24 @@ import com.example.mytune.model.Artista
 
 class PerfilFragment : Fragment() {
 
+    private lateinit var txtNombre: TextView
+    private lateinit var txtStats: TextView
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_perfil, container, false)
+
         val containerArtistas = view.findViewById<LinearLayout>(R.id.containerArtistas)
         val btnAgregarArtista = view.findViewById<Button>(R.id.btnAgregarArtista)
+        val btnActualizarUsuario = view.findViewById<Button>(R.id.btnEditarPerfil)
+        txtNombre = view.findViewById<TextView>(R.id.txtTituloPerfil)
+        txtStats = view.findViewById<TextView>(R.id.txtStatsPerfil)
+
+        //Mostra informacion del usuario
+
+        actualizarVistaUsuario()
 
         // Mostrar Artistas Favoritos
         for (cancion in ArtitasData.listaArtista) {
@@ -32,6 +43,10 @@ class PerfilFragment : Fragment() {
         // Configurar botón para agregar artista
         btnAgregarArtista.setOnClickListener {
             mostrarDialogoAgregarCancion(inflater, containerArtistas)
+        }
+
+        btnActualizarUsuario.setOnClickListener {
+            MostraDialogoActualizarUsuario(inflater,)
         }
 
         return view
@@ -56,6 +71,8 @@ class PerfilFragment : Fragment() {
                 if (isFavorite) R.drawable.ic_favorite_filled
                 else R.drawable.ic_favorite_border
             )
+            UsuarioData.usuarioInfo.numArtistasFavo = ArtitasData.listaArtista.count{ it.esfavorito }
+            actualizarVistaUsuario()
         }
         container.addView(itemView)
     }
@@ -65,7 +82,7 @@ class PerfilFragment : Fragment() {
         val inputGenero = dialogView.findViewById<TextView>(R.id.inputGenero)
 
         val dialog = AlertDialog.Builder(requireContext())
-            .setTitle("Agregar Canción")
+            .setTitle("Agregar Artista")
             .setView(dialogView)
             .setPositiveButton("Agregar") { _, _ ->
                 val nombreStr = inputNombre.text.toString().ifBlank { "Sin título" }
@@ -73,7 +90,33 @@ class PerfilFragment : Fragment() {
 
                 val artitaNuevo = Artista(nombreStr,generoStr,true)
                 ArtitasData.listaArtista.add(artitaNuevo)
+                UsuarioData.usuarioInfo.numArtistasFavo = ArtitasData.listaArtista.count{ it.esfavorito }
+                actualizarVistaUsuario()
                 mostrarArtista(inflater, container, artitaNuevo)
+            }
+            .setNegativeButton("Cancelar", null)
+            .create()
+        dialog.show()
+    }
+
+    private fun actualizarVistaUsuario() {
+        txtNombre.text = UsuarioData.usuarioInfo.nombre
+        txtStats.text = "Artistas: " + UsuarioData.usuarioInfo.numArtistasFavo.toString()
+        txtNombre.textAlignment = View.TEXT_ALIGNMENT_CENTER
+        txtStats.textAlignment = View.TEXT_ALIGNMENT_CENTER
+    }
+
+    private fun MostraDialogoActualizarUsuario(inflater: LayoutInflater){
+        val dialogView = inflater.inflate(R.layout.dialog_update_info_user, null)
+        val inputNombre = dialogView.findViewById<TextView>(R.id.inputNombreUser)
+
+        val dialog = AlertDialog.Builder(requireContext())
+            .setTitle("Actualizar Usuario")
+            .setView(dialogView)
+            .setPositiveButton("Actualizar") { _, _ ->
+                val nombreStr = inputNombre.text.toString().ifBlank { "NA" }
+                UsuarioData.usuarioInfo.nombre = nombreStr
+                actualizarVistaUsuario()
             }
             .setNegativeButton("Cancelar", null)
             .create()
