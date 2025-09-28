@@ -1,39 +1,233 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1e1e1e"
     android:padding="16dp">
 
-    <TextView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Carátulas de Álbumes"
-        android:textColor="#fff"
-        android:textSize="18sp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="🎵 Dawn FM - The Weeknd"
-        android:textColor="#aaa"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Carátulas de Álbumes"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="🔥 Mercury - Imagine Dragons"
-        android:textColor="#aaa"/>
+        <!-- Rejilla con 2 columnas -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:useDefaultMargins="true">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="🌟 Future Nostalgia - Dua Lipa"
-        android:textColor="#aaa"/>
+            <!-- Álbum 1 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#2a2a2a"
+                android:id="@+id/cardAlbum1">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="💫 Positions - Ariana Grande"
-        android:textColor="#aaa"/>
-</LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:gravity="center_horizontal">
+
+                    <FrameLayout
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/bg_icon"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_music_note"
+                            app:tint="#fff"
+                            android:layout_gravity="center"/>
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dawn FM"
+                        android:textStyle="bold"
+                        android:textColor="#fff"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="The Weeknd"
+                        android:textColor="#aaa"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Álbum 2 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#2a2a2a"
+                android:id="@+id/cardAlbum2">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:gravity="center_horizontal">
+
+                    <FrameLayout
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/bg_icon"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_fire"
+                            app:tint="#fff"
+                            android:layout_gravity="center"/>
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mercury"
+                        android:textStyle="bold"
+                        android:textColor="#fff"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Imagine Dragons"
+                        android:textColor="#aaa"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Álbum 3 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#2a2a2a"
+                android:id="@+id/cardAlbum3">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:gravity="center_horizontal">
+
+                    <FrameLayout
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/bg_icon"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_star"
+                            app:tint="#fff"
+                            android:layout_gravity="center"/>
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Future Nostalgia"
+                        android:textStyle="bold"
+                        android:textColor="#fff"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dua Lipa"
+                        android:textColor="#aaa"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Álbum 4 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#2a2a2a"
+                android:id="@+id/cardAlbum4">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:gravity="center_horizontal">
+
+                    <FrameLayout
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/bg_icon"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_stars"
+                            app:tint="#fff"
+                            android:layout_gravity="center"/>
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Positions"
+                        android:textStyle="bold"
+                        android:textColor="#fff"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ariana Grande"
+                        android:textColor="#aaa"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>
