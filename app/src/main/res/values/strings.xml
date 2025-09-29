@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">MyTune</string>
     <string name="favorito">Favorito</string>
+
+    <string-array name="platforms">
+        <item>Spotify</item>
+        <item>YouTube Music</item>
+        <item>Apple Music</item>
+        <item>SoundCloud</item>
+    </string-array>
 </resources>

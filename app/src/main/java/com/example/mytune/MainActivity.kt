@@ -21,8 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         btnPerfil.setOnClickListener { replaceFragment(PerfilFragment()) }
         btnAlbumes.setOnClickListener { replaceFragment(AlbumesFragment()) }
-        btnVideos.setOnClickListener { replaceFragment(VideosFragment()) }
-        btnStreaming.setOnClickListener { replaceFragment(StreamingFragment()) }
+        btnVideos.setOnClickListener { replaceFragment(VideoFragment()) }
+        btnStreaming.setOnClickListener { replaceFragment(StreamingBrowserFragment()) }
         btnListas.setOnClickListener { replaceFragment(ListasFragment()) }
     }
 
