@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         btnAlbumes.setOnClickListener { replaceFragment(AlbumesFragment()) }
         btnVideos.setOnClickListener { replaceFragment(VideoFragment()) }
         btnStreaming.setOnClickListener { replaceFragment(StreamingBrowserFragment()) }
-        btnListas.setOnClickListener { replaceFragment(ListasFragment()) }
+        btnListas.setOnClickListener { replaceFragment(PlaylistsFragment()) }
     }
 
     private fun replaceFragment(fragment: Fragment) {

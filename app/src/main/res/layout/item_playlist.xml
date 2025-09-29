@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_playlist_item"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginBottom="8dp">
+
+    <TextView
+        android:id="@+id/txtPlaylistName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre de Playlist"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+</LinearLayout>

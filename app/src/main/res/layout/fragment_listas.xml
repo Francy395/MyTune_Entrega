@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -13,21 +14,21 @@
         android:textSize="18sp"
         android:layout_marginBottom="10dp"/>
 
-    <TextView
+    <!-- 👇 Botón para crear nueva playlist -->
+    <Button
+        android:id="@+id/btnCrearPlaylist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="🎵 Favoritos 2024 (25 canciones)"
-        android:textColor="#aaa"/>
+        android:text="➕ Crear nueva lista"
+        android:backgroundTint="#3a3a3a"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="12dp"/>
 
-    <TextView
+    <!-- 👇 Lista de playlists -->
+    <ListView
+        android:id="@+id/listPlaylists"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="🎧 Workout Mix (18 canciones)"
-        android:textColor="#aaa"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="🌙 Chill Vibes (32 canciones)"
-        android:textColor="#aaa"/>
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:dividerHeight="8dp"/>
 </LinearLayout>

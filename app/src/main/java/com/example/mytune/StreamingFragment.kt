@@ -11,6 +11,7 @@ import android.webkit.WebViewClient
 import android.widget.AdapterView
 import android.widget.Spinner
 import androidx.fragment.app.Fragment
+import android.widget.ArrayAdapter
 
 class StreamingBrowserFragment : Fragment() {
 
@@ -34,7 +35,17 @@ class StreamingBrowserFragment : Fragment() {
         spinner = view.findViewById(R.id.spinnerPlatforms)
         webView = view.findViewById(R.id.webView)
 
-        // Configurar WebView
+        // ⚡️ Configurar Spinner con texto blanco usando tu string-array
+        val adapter = ArrayAdapter.createFromResource(
+            requireContext(),
+            R.array.platforms,
+            R.layout.item_spinner // 👈 texto blanco en seleccionado
+        )
+        adapter.setDropDownViewResource(R.layout.item_spinner_dropdown) // 👈 texto negro en desplegable
+        spinner.adapter = adapter
+
+
+        // ⚡️ Configurar WebView
         val webSettings: WebSettings = webView.settings
         webSettings.javaScriptEnabled = true
         webSettings.domStorageEnabled = true
@@ -63,6 +74,7 @@ class StreamingBrowserFragment : Fragment() {
 
         return view
     }
+
 
     override fun onPause() {
         super.onPause()
