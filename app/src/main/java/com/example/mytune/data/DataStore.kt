@@ -26,19 +26,19 @@ object AlbumesData {
             nombre = "Dawn FM",
             artista = "The Weeknd",
             canciones = listOf("Take My Breath", "Sacrifice", "Out of Time"),
-            recursos = listOf(R.raw.take_my_breath, R.raw.sacrifice, R.raw.out_of_time)
+            recursos = listOf(R.raw.take_my_breath_v, R.raw.sacrifice, R.raw.out_of_time)
         ),
         Album(
             nombre = "Mercury – Act 1",
             artista = "Imagine Dragons",
             canciones = listOf("Enemy", "Bones", "Wrecked"),
-            recursos = listOf(R.raw.enemy, R.raw.bones, R.raw.wrecked)
+            recursos = listOf(R.raw.enemy, R.raw.bones_v, R.raw.wrecked)
         ),
         Album(
             nombre = "Future Nostalgia",
             artista = "Dua Lipa",
             canciones = listOf("Levitating", "Don’t Start Now", "Hallucinate"),
-            recursos = listOf(R.raw.levitating, R.raw.dont_start_now, R.raw.hallucinate)
+            recursos = listOf(R.raw.levitating_v, R.raw.dont_start_now, R.raw.hallucinate)
         ),
         Album(
             nombre = "Positions",
